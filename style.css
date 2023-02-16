@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.conteudo {
+    flex: 1 0 auto;
+    display: grid;
+    grid-template-columns: 1.12fr 1fr;
+    grid-template-rows: minmax(310px, auto);
+    grid-template-areas: "loginBox logoBox";
+}
+
+.loginBox {
+    background-color: #ffffff;
+    grid-area: loginBox;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tituloEdescricao {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+.tituloEdescricao h1 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 620;
+    font-size: 52px;
+}
+.tituloEdescricao p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 31px;
+    letter-spacing: -0.02em;
+    color: #909090;
+}
+.form {
+    width: 520px;
+    height: auto;
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+.box input {
+    width: 95%;
+    height: 54px;
+    border-radius: 10px;
+    border: 1px solid #e2e6ed;
+    padding-left: 5px;
+}
+.box label {
+    font-size: 1.8em;
+}
+.boxCheck {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3.5em;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+.boxCheck #check {
+    width: 25px;
+    height: 25px;
+}
+.boxCheck label {
+    position: relative;
+    top: -3.5px;
+    left: 2px;
+    overflow: hidden;
+    z-index: 1;
+    font-size: 1.5em;
+}
+.boxCheck a {
+    color: #7c3cce;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+}
+.btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 95%;
+    margin-left: 1.5rem;
+    margin-right: 3rem;
+}
+.btn {
+    padding: 18px;
+    margin-bottom: 15px;
+}
+.btn.style {
+    background: #7c3cce;
+    border-radius: 8px;
+    border-color: transparent;
+    color: #ffffff;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+}
+.btn.style2 {
+    background: #ffffff;
+    border: 1px solid #e2e6ed;
+    box-shadow: 0px 1px 5px rgb(0 0 0 / 5%);
+    border-radius: 8px;
+}
+.logoBox {
+    background-color: #f3f4f8;
+    grid-area: logoBox;
+    position: relative;
+    overflow: hidden;
+}
+.bola {
+    position: absolute;
+    bottom: 0px;
+    left: 32%;
+    right: 32%;
+    width: 280px;
+    height: 280px;
+    background: linear-gradient(140deg, #ab75f0 30%, #7c3cce 70%);
+    border-radius: 50%;
+}
+
+.white {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 145px;
+}
+
+.white::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(13.5px);
+    -webkit-backdrop-filter: blur(13.5px);
+}
+
+@media (max-width: 1075px) {
+    .conteudo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #eee;
+    }
+    .logoBox {
+        display: none;
+    }
+}
+
+@media (max-width: 535px) {
+    .loginBox {
+        width: 90%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 15px;
+    }
+    .tituloEdescricao {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+    }
+    .tituloEdescricao h1 {
+        font-size: 34px;
+        text-align: center;
+    }
+    .tituloEdescricao p {
+        font-size: 16px;
+        text-align: center;
+    }
+    .box input {
+        width: 88%;
+        height: 54px;
+        padding-left: 5px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .box label {
+        font-size: 1.3em;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .boxCheck {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.8em;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .boxCheck #check {
+        width: 22px;
+        height: 22px;
+    }
+    .boxCheck label {
+        font-size: 1.2em;
+    }
+    .boxCheck a {
+        font-size: 15px;
+    }
+    .btns {
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .btn {
+        padding: 16px;
+        margin-bottom: 15px;
+    }
+    .btn.style {
+        background: #7c3cce;
+        border-radius: 8px;
+        border-color: transparent;
+        color: #ffffff;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+    }
+    .btn.style2 {
+        background: #ffffff;
+        border: 1px solid #e2e6ed;
+        box-shadow: 0px 1px 5px rgb(0 0 0 / 5%);
+        border-radius: 8px;
+    }
+}
